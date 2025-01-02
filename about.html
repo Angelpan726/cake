@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我們 - 曾阿罵手工坊</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #fff8e1, #ffffff);
+            overflow-x: hidden;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff8e1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        header img {
+            max-width: 180px;
+            animation: logoBounce 2s infinite ease-in-out;
+        }
+        .back-home {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            padding: 10px 20px;
+            background-color: #f3dc89;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .back-home:hover {
+            background-color: #edd080;
+        }
+        @keyframes logoBounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #6b4226;
+        }
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+        .highlight {
+            color: #d2691e;
+            font-weight: bold;
+        }
+        .image-container {
+            max-width: 400px;
+            margin: 30px auto;
+            perspective: 1000px;
+        }
+        .image {
+            width: 100%;
+            border-radius: 10px;
+            transform: rotateY(90deg);
+            opacity: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #fef2c7;
+            color: rgb(0, 0, 0);
+        }
+        /* 視差效果背景 */
+        .parallax {
+            background: url('parallax-bg.jpg') center/cover no-repeat;
+            height: 300px;
+            margin: 40px 0;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-home">返回首頁</a>
+        <img src="logo.png" alt="曾阿罵手工坊 Logo">
+    </header>
+
+    <section class="section">
+        <h2>我們的故事</h2>
+        <div class="about-content">
+            <p>
+                曾阿罵手工坊成立於 <span class="highlight">2010 年</span>，起源於一份對手工烘焙的熱愛。
+                阿罵希望用最樸實的方式將童年記憶中的美味傳遞給每一位客人。
+            </p>
+            <p>
+                我們選用 <span class="highlight">在地新鮮食材</span>，堅持不使用人工添加物，讓每個產品充滿安心與溫暖。
+
+                從節日限定的手工麵包到專屬設計的節日蛋糕，我們的作品是對生活美好的致敬。
+            </p>
+        </div>
+        <div class="image-container">
+            <img class="image" src="about-us.jpg" alt="關於我們圖片">
+        </div>
+    </section>
+
+    <div class="parallax"></div>
+
+    <section class="section">
+        <h2>我們的使命</h2>
+        <div class="about-content">
+            <p>
+                我們不僅希望提供美味的甜點，更希望成為您生活中 <span class="highlight">幸福時刻的陪伴者</span>。
+                在每一份甜點裡，我們注入的是對細節的關注與對美味的追求。
+            </p>
+            <p>
+                阿罵手工坊未來將致力於 <span class="highlight">推廣在地文化</span>，讓更多人品嚐到我們家鄉的美味與溫度。
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <img class="footer-logo" src="logo.png" alt="LOGO">
+            <p><a href="#">隱私政策</a> | <a href="#">服務條款</a></p>
+            <p>© 曾阿罵手作坊</p>
+        </div>
+    </footer>
+    <style>
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #fef2c7;
+        }
+
+        .footer-logo {
+            width: 150px;
+            height: auto;
+        }
+
+        footer p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+
+    <script>
+        // GSAP 動畫設定
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.to(".image", {
+                opacity: 1,
+                rotateY: 0,
+                duration: 1.5,
+                delay: 0.5,
+            });
+
+            gsap.utils.toArray('.section').forEach((section, i) => {
+                gsap.from(section, {
+                    opacity: 0,
+                    y: 50,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

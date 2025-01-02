@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蛋捲禮盒</title>
+    <title>甜甜圈</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff8e1;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            background-color: #f3dc89;
+            padding: 30px 0;
+        }
+
+        header img {
+            max-width: 180px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .product-image img {
+            width: 100%;
+            max-width: 400px; /* 限制最大寬度 */
+            height: 300px; /* 固定高度 */
+            object-fit: cover; /* 圖片裁切顯示，保持比例 */
+            border-radius: 20px; /* 圓角效果 */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* 陰影 */
+            border: 5px solid #f3dc89; /* 主色調邊框 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            
+
+
+        }
+
+        .product-image img:hover {
+            transform: scale(1.05); /* 滑鼠經過時放大 */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            
+        }
+
+        .product-details {
+            flex: 1;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #6b4226;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 1.8rem;
+            color: #666;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: #6b4226;
+            margin-top: 20px;
+        }
+
+        ul {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 20px;
+            font-size: 1.2rem;
+            color: #000000;
+            background-color: #f3dc89;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            margin-right: 15px;
+        }
+
+        .button:hover {
+            background-color: #edd080;
+            color: #000000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 0;
+            background-color: #fef2c7;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="曾阿罵手工坊 Logo">
+    </header>
+
+    <nav class="navbar">
+        <a href="#about">關於我們</a>
+        <a href="#products">商品專區</a>
+        <a href="#news">最新消息</a>
+        <a href="#contact">聯絡我們</a>
+    </nav>
+
+    <div class="container">
+        <div class="product-image">
+            <img src="1.jpg" alt="蛋捲禮盒">
+        </div>
+        <div class="product-details">
+            <h2>蛋捲禮盒</h2>
+            <p class="price">價格: NT$600</p>
+            <p class="description">
+                精選頂級食材，傳承百年手工技藝，曾阿罵手工坊的蛋捲禮盒擁有酥脆的口感與濃郁的香氣。每一口都充滿家的味道，是送禮與享用的最佳選擇。
+            </p>
+            <h3>特色</h3>
+            <ul>
+                <li>採用天然無添加食材，健康又安心。</li>
+                <li>純手工製作，每一片皆用心完成。</li>
+                <li>包裝精美，適合各種節慶與場合。</li>
+            </ul>
+            <h3>保存期限</h3>
+            <p>常溫保存30天，請避免置於陽光直射或潮濕處。</p>
+            <a href="nutrition.html" class="button">查看營養資訊</a>
+            <a href="index.html" class="button">返回首頁</a>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div class="footer-content">
+        <img class="footer-logo" src="logo.png" alt="LOGO">
+        <p><a href="#">隱私政策</a> | <a href="#">服務條款</a></p>
+        <p>© 曾阿罵手作坊</p>
+    </div>
+</footer>
+
+<style>
+    .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: #fef2c7;
+    }
+
+    .footer-logo {
+        width: 150px;
+        height: auto;
+    }
+
+    footer p {
+        margin: 0;
+        color: #666;
+        font-size: 0.9rem;
+    }
+</style>
+</html>
